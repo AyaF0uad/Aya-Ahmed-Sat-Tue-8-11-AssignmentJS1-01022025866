@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's For Dinner</title>
+        <!----- Font Awesome ------>
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <!----- Bootstrap ------>
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <!----- Main CSS ------>
+        <link rel="stylesheet" href="css/main.css">
+</head>
+<body style="background-color: rgb(255, 248, 237);">
+    <!------ Navbar ------->
+    <nav class="nav navbar-expand bg-body-tertiary p-3 ">
+        <div class="container d-flex w-75">
+            <div class="navbar-brand d-flex align-items-center gap-2">
+                <div class="icon-frame d-flex justify-content-center align-items-center">
+                   <i class="fas fa-utensils" style="color: rgb(255, 255, 255);"></i>
+                </div>
+                <div class="icon-text">
+                    <h4 class="fw-bolder p-0 m-0">What's For Dinner</h4>
+                    <p class="fw-lighter p-0 m-0">Your daily meal inspiration</p>
+                </div>
+            </div>
+            <div class="nav-profile ms-auto d-flex justify-content-center align-items-center gap-3">
+                <i class="fa-solid fa-bookmark"></i>
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <i class="fa-solid fa-gear" ></i>
+                <div class="pfp-frame d-flex align-items-center justify-content-center">
+                    <img src="images/avatar-4.jpg"   alt="pfp">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!------ Main ------->
+    <div class="container-fluid main bg-white my-4 mx-auto rounded-4">
+        <div class="row h-100 ">
+            <div class="col-5 food-img">
+                <img src="images/photo-1455619452474-d2be8b1e70cd.jpg" alt="food" class=" rounded-start-4 " id="mImg">
+                <div class="rate" id="rate">
+                    <i class="fa-solid fa-star" style="color: rgb(235, 173, 0);"></i>  4.7  <span class="fw-lighter"> (312 reviews)</span>
+                </div>
+
+                <div class="food-dis d-flex justify-content-between">
+                    <div class="food-dis-item text-center">
+                        <i class=" fa-solid fa-clock fs-4 " style="color: orangered;"></i>
+                        <p class="fw-lighter m-0 p-0">Prep Time</p>
+                        <p class="fw-bold m-0 p-0" id="prep-time">15 min</p>
+                    </div>
+
+                    <div class="food-dis-item text-center">
+                        <i class="fa-solid fa-fire-burner fs-4" style="color: rgb(233, 17, 75);"></i>
+                        <p class="fw-lighter m-0 p-0">Cook Time</p>
+                        <p class="fw-bold m-0 p-0" id="cook-time">25 min</p>
+                    </div>
+
+                    <div class="food-dis-item text-center">
+                        <i class="fa-solid fa-users fs-4" style="color: rgb(15, 144, 243);"></i>
+                        <p class="fw-lighter m-0 p-0">Servings</p>
+                        <p class="fw-bold m-0 p-0" id="ppl">4 people</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-7 p-4 right-panel">
+                <div class="recipe-header">
+                    <div class="dis d-flex gap-4 p-2">
+                        <div class=" green d-flex justify-content-center align-items-center" id="lvl">
+                            Intermediate
+                        </div>
+                        <div class=" blue d-flex justify-content-center align-items-center" id="country">
+                            Asian
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="content-title d-flex justify-content-between">
+                            <div>
+                                <h1 class="fw-bold" id="title">Thai Green Curry</h1>
+                                <p class="text" id="mDisc">Vibrant and aromatic curry with vegetables and coconut milk</p>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <div class="icons-frame p-3 d-flex justify-content-center align-items-center rounded-3" style="background-color: rgba(255, 156, 34, 0.271);">
+                                    <i class="fa-solid fa-bookmark" style="color: orangered;"></i>
+                                </div>
+                                <div class="icons-frame p-3 d-flex justify-content-center align-items-center rounded-3" style="background-color: rgba(255, 156, 34, 0.271);">
+                                    <i class="fa-solid fa-share-nodes" style="color: orangered;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-details">
+                    <ul class="nav nav-tabs custom-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active"
+                                id="Ingredients-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#Ingredients-tab-pane"
+                                type="button"
+                                role="tab"
+                                aria-controls="Ingredients-tab-pane"
+                                aria-selected="true">
+                                <i class="fa-solid fa-list-check"></i> Ingredients
+                            </button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                id="Instructions-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#Instructions-tab-pane"
+                                type="button"
+                                role="tab"
+                                aria-controls="Instructions-tab-pane"
+                                aria-selected="false">
+                                <i class="fa-duotone fa-solid fa-book-open" style="--fa-primary-color: rgb(255, 212, 59); --fa-secondary-color: rgb(255, 212, 59); --fa-secondary-opacity: 1;"></i> Instructions
+                            </button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                id="Nutrition-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#Nutrition-tab-pane"
+                                type="button"
+                                role="tab"
+                                aria-controls="Nutrition-tab-pane"
+                                aria-selected="false">
+                                <i class="fa-solid fa-chart-pie"></i> Nutrition
+                            </button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                id="tips-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#tips-tab-pane"
+                                type="button"
+                                role="tab"
+                                aria-controls="tips-tab-pane"
+                                aria-selected="false">
+                                <i class="fa-solid fa-lightbulb"></i> Chef's Tips
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active"
+                            id="Ingredients-tab-pane"
+                            role="tabpanel"
+                            aria-labelledby="Ingredients-tab"
+                            tabindex="0">
+
+                            <ol class="ingredients-list m-5 p-4" id="ingredients">
+                                <li>2 tablespoons green curry paste</li>
+                                <li>400ml coconut milk</li>
+                                <li>300g chicken breast, sliced</li>
+                                <li>1 red bell pepper, sliced</li>
+                                <li>100g green beans</li>
+                                <li>1 eggplant, cubed</li>
+                                <li>2 tablespoons fish sauce</li>
+                                <li>1 tablespoon palm sugar</li>
+                                <li>Fresh Thai basil leaves</li>
+                            </ol>
+                        </div>
+
+                        <div class="tab-pane fade"
+                            id="Instructions-tab-pane"
+                            role="tabpanel"
+                            aria-labelledby="Instructions-tab"
+                            tabindex="0">
+
+                            <ol class="instructions-list p-3 overflow-auto" id="instructions">
+                                <li class="instruction-item rounded-3  p-3 mb-3">
+                                    Heat a large pot or wok over medium heat. Add curry paste and cook for 1 minute until fragrant.
+                                </li>
+                                <li class="instruction-item rounded-3  p-3 mb-3">
+                                    Add half the coconut milk and stir to combine with the curry paste.
+                                </li>
+                                <li class="instruction-item rounded-3  p-3 mb-3">
+                                    Add sliced chicken and cook until no longer pink, about 5 minutes.
+                                </li>
+                                <li class="instruction-item rounded-3  p-3 mb-3">
+                                    Add remaining coconut milk, vegetables, fish sauce, and palm sugar.
+                                </li>
+                                <li class="instruction-item rounded-3  p-3 mb-3">
+                                    Simmer for 15–20 minutes until vegetables are tender and sauce has thickened.
+                                </li>
+                                <li class="instruction-item rounded-3  p-3">
+                                    Stir in fresh Thai basil leaves. Serve hot with jasmine rice.
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="tab-pane fade"
+                            id="Nutrition-tab-pane"
+                            role="tabpanel"
+                            aria-labelledby="Nutrition-tab"
+                            tabindex="0">
+                            <div class="row">
+                                <div class="col-6 py-4">
+                                    <div class="d-flex justify-content-between align-items-center p-3 m-3 w-100 gray rounded-2">
+                                        <div class="d-flex gap-3 align-items-center fw-medium ">
+                                            <div class="icon-frame1 rounded-2 d-flex justify-content-center align-items-center p3" style="background-color: rgba(255, 166, 0, 0.226);">
+                                                <i class="fa-solid fa-fire" style="color: orangered;"></i>
+                                            </div>
+                                            Calories
+                                        </div>
+                                        <h4 class="fw-bold" id="calories">420 kcal</h4>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center p-3 m-3 w-100 gray rounded-2">
+                                        <div class="d-flex gap-3 align-items-center fw-medium ">
+                                            <div class="icon-frame1 rounded-2 d-flex justify-content-center align-items-center p3" style="background-color: rgba(255, 212, 59, 0.51);">
+                                                <i class="fa-brands fa-pagelines" style="color: rgb(169, 137, 22);"></i>
+                                            </div>
+                                            Carbohydrates
+                                        </div>
+                                        <h4 class="fw-bold" id="carbohydrates">22g</h4>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center p-3 m-3 w-100 gray rounded-2">
+                                        <div class="d-flex gap-3 align-items-center fw-medium ">
+                                            <div class="icon-frame1 rounded-2 d-flex justify-content-center align-items-center p3" style="background-color: rgba(99, 230, 190, 1.00);">
+                                                <i class="fa-solid fa-seedling" style="color: rgb(29, 135, 102);"></i>
+                                            </div>
+                                            Fiber
+                                        </div>
+                                        <h4 class="fw-bold" id="fiber">5g</h4>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 py-4">
+                                    <div class="d-flex justify-content-between align-items-center p-3 m-3 w-100 gray rounded-2">
+                                        <div class="d-flex gap-3 align-items-center fw-medium ">
+                                            <div class="icon-frame1 rounded-2 d-flex justify-content-center align-items-center p3" style="background-color: rgba(116, 139, 252, 0.71);">
+                                                <i class="fa-solid fa-dumbbell" style="color: rgb(0, 27, 162);"></i>
+                                            </div>
+                                            Protein
+                                        </div>
+                                        <h4 class="fw-bold" id="protein">26g</h4>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center p-3 m-3 w-100 gray rounded-2">
+                                        <div class="d-flex gap-3 align-items-center fw-medium ">
+                                            <div class="icon-frame1 rounded-2 d-flex justify-content-center align-items-center p3" style="background-color:rgba(191, 63, 86, 0.409);">
+                                                <i class="fa-solid fa-droplet" style="color: rgb(162, 0, 62);"></i>
+                                            </div>
+                                            Fat
+                                        </div>
+                                        <h4 class="fw-bold" id="fat">26g</h4>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center p-3 m-3 w-100 gray rounded-2">
+                                        <div class="d-flex gap-3 align-items-center fw-medium ">
+                                            <div class="icon-frame1 rounded-2 d-flex justify-content-center align-items-center p3" style="background-color: rgba(255, 0, 0, 0.43);">
+                                                <i class="fa-solid fa-cube" style="color: rgb(255, 0, 0);"></i>
+                                            </div>
+                                            Sodium
+                                        </div>
+                                        <h4 class="fw-bold" id="sodium">890mg</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade"
+                            id="tips-tab-pane"
+                            role="tabpanel"
+                            aria-labelledby="tips-tab"
+                            tabindex="0">
+
+                            <div class="chef-tip d-flex align-items-center gap-3 p-3 mb-3 mt-5">
+                                <i class="fa-solid fa-check tip-check rounded-circle d-flex align-items-center justify-content-center"></i>
+                                <p class="mb-0" id="tip1">Adjust spice level by using more or less curry paste</p>
+                            </div>
+
+                            <div class="chef-tip d-flex align-items-center gap-3 p-3 mb-3">
+                                <i class="fa-solid fa-check tip-check rounded-circle d-flex align-items-center justify-content-center"></i>
+                                <p class="mb-0" id="tip2">Add vegetables in stages based on cooking time needed</p>
+                            </div>
+
+                            <div class="chef-tip d-flex align-items-center gap-3 p-3 mb-3">
+                                <i class="fa-solid fa-check tip-check rounded-circle d-flex align-items-center justify-content-center"></i>
+                                <p class="mb-0" id="tip3">Fresh Thai basil is essential for authentic flavor</p>
+                            </div>
+
+                            <div class="chef-tip d-flex align-items-center gap-3 p-3">
+                                <i class="fa-solid fa-check tip-check rounded-circle d-flex align-items-center justify-content-center"></i>
+                                <p class="mb-0" id="tip4">Use full-fat coconut milk for richest, creamiest sauce</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn recipe-btn d-flex align-items-center justify-content-center gap-2" id="randomBtn">
+                        <i class="fa-solid fa-rotate"></i>
+                        Try Another Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------ Bootstap JS ------>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+
+*{
+    box-sizing: 0;
+}
+
+/* Navbar */
+nav{
+    box-shadow: 0px 1px 12px -5px #f2621e7d;
+}
+
+.icon-frame, .pfp-frame{
+    background-color: oklch(0.65 0.23 30.54);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 12px -5px #9c4015b3;
+;
+}
+
+.pfp-frame{
+    width: 40px;
+    height: 40px;
+}
+
+.pfp-frame img{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+}
+
+.nav-profile i{
+    font-size: 20px;
+    color: rgb(66, 66, 85);
+    transition: color 0.3s ease;
+}
+
+.nav-profile i:hover{
+    color: oklch(65.682% 0.23008 30.335);
+}
+
+/* Main */
+.main{
+    height: 750px;
+    width: 1200px;
+}
+
+.food-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-img {
+    padding-left: 0;
+    position: relative;
+}
+
+.rate{
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.food-dis{
+    background-color: rgba(255, 255, 255, 0.875);
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    width: 90%;
+    padding: 20px 30px;
+    left: 20px;
+    bottom: 20px;
+}
+
+.blue, .green{
+    font-size: small;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 20px;
+}
+
+.blue{
+    color: oklch(48.8% .243 264.376);
+    background-color: oklch(0.93 0.03 255.65);
+}
+
+.green{
+    color: oklch(0.53 0.15 148.98);
+    background-color: oklch(0.96 0.04 157.51);
+}
+
+.text{
+    font-size: 18px;
+}
+
+.icons-frame{
+    height: 45px;
+    width: 45px;
+}
+
+.custom-tabs {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.custom-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #6c757d;
+    background-color: transparent;
+    border-radius: 0;
+    transition: color 0.3s ease;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.custom-tabs .nav-link:hover {
+    color: oklch(65.682% 0.23008 30.335);
+}
+
+.custom-tabs .nav-link.active {
+    color: oklch(65.682% 0.23008 30.335);
+    border: none;
+    border-bottom: 3px solid oklch(65.682% 0.23008 30.335);
+}
+
+.custom-tabs .nav-item {
+    flex: 1;
+}
+
+.ingredients-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: ingredient;
+    background-color: rgb(255, 248, 237);
+}
+
+.ingredients-list li {
+    counter-increment: ingredient;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #212121;
+}
+
+.ingredients-list li::before {
+    content: counter(ingredient);
+    background-color: oklch(65.682% 0.23008 30.335);
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.instructions-list {
+    height: auto;
+    list-style: none;
+    counter-reset: step;
+}
+
+.instruction-item {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: justify;
+    line-height: 1.6;
+    counter-increment: step;
+}
+
+.instruction-item::before {
+    content: counter(step);
+    background-color: oklch(65.682% 0.23008 30.335);
+    color: white;
+    border-radius: 8px;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.instructions-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.instructions-list::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.instructions-list::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 248, 237);
+    border-radius: 10px;
+}
+
+.icon-frame1{
+    width: 38px;
+    height: 38px;
+}
+
+.gray{
+    background-color: #ececf44e;
+}
+
+.chef-tip {
+    background-color: rgb(255, 248, 237);
+    border-left: 4px solid oklch(0.83 0.17 81.03);
+    border-radius: 8px;
+}
+
+.tip-check {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    background-color: oklch(0.67 0.17 53.38);
+    color: white;
+    font-size: 14px;
+}
+
+.chef-tip p {
+    color: #212121;
+    line-height: 1.6;
+}
+
+/* Layout adjustments */
+.main {
+    height: 750px;
+}
+
+.main > .row {
+    height: 100%;
+}
+
+.right-panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.recipe-header {
+    flex-shrink: 0;
+}
+
+.recipe-details {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-tabs {
+    flex-shrink: 0;
+}
+
+.recipe-details .tab-content {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.recipe-details .tab-pane {
+    min-height: 100%;
+}
+
+.recipe-btn {
+    width: 35%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(to right, oklch(0.78 0.17 53.38), oklch(0.55 0.19 40));
+    color: white;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+    flex-shrink: 0;
+    margin-top: 16px;
+}
+
+.recipe-btn:hover {
+    color: white;
+    opacity: .9;
+}
